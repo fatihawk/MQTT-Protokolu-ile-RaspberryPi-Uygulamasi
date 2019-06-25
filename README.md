@@ -10,47 +10,47 @@
  
 Kurmak için terminal’e yazdığım kod:
 
-pi@raspberry:~ $ mosquitto -d
+### pi@raspberry:~ $ mosquitto -d
 
   Raspberry Pi'yi web sunucusuna dönüştürmek için Flask adlı bir Python Mikroframework kullandım.
 Flask'ı yüklemek için pip yüklememiz gerekir. Pi'mizi güncellemek ve pip güncellemek için aşağıdaki komutları çalıştırdım:
 
-pi@raspberrypi ~ $ sudo apt-get update
-pi@raspberrypi ~ $ sudo apt-get upgrade
-pi@raspberrypi ~ $ sudo apt-get install python-pip python-flask git-core
+### pi@raspberrypi ~ $ sudo apt-get update
+### pi@raspberrypi ~ $ sudo apt-get upgrade
+### pi@raspberrypi ~ $ sudo apt-get install python-pip python-flask git-core
 
 
   Bu proje, Python Flask uygulamamız tarafından eşzamansız olarak güncellenebilen bir Python Flask web sayfası oluşturmamıza olanak veren SocketIO'yu kullanacağız. Bu, en son okumaları görmek için web sayfasını yenilememiz gerekmediği anlamına gelir, anında güncellenir. Flask SocketIO Python paketini kurmak için aşağıdaki kodu çalıştırdım.
   
- pi@raspberrypi ~ $ sudo pip install flask-socketio
+ ### pi@raspberrypi ~ $ sudo pip install flask-socketio
 
   Sonrasında sıcaklık ve nem değerlerini kontrol etmek için bir tane Pyhton dosyası oluşturacağız.Bu dosya ile Web sunucusunu ayarlayıp ve bu düğmelere basıldığında ESP8266'dan bir MQTT mesajı yayınlar. Ayrıca okumaları almak için (sıcaklık ve nem  değerleri )MQTT ile abone oluşturacağız.
 
 Bunun için bir klasör oluşturdum:
 
-pi@raspberrypi ~ $ mkdir web-server
-pi@raspberrypi ~ $ cd web-server
-pi@raspberrypi:~/web-server $
+### pi@raspberrypi ~ $ mkdir web-server
+### pi@raspberrypi ~ $ cd web-server
+### pi@raspberrypi:~/web-server $
 
 Sonrasında kodları app.py adında bir dosya oluşturdum:
 
-pi@raspberrypi:~/web-server $ nano app.py
+### pi@raspberrypi:~/web-server $ nano app.py
 
-Sonrasında verileri yayınlamak için aşağıdaki kodları app.py’nin içine attım:
+Sonrasında verileri yayınlamak için  gerekli kodları [app.py](https://github.com/fatihawk/MQTT-Protokolu-ile-RaspberryPi-Uygulamasi/blob/master/app.py)’nin içine attım.
 
   Python scriptimizden ayrılan HTML etiketlerinin tutulması, projemizin nasıl organize edildiğidir. Flask, Python scriptimizden dinamik dosyamıza HTML dosyasını göndermek için kullanabileceğimiz bir Jinja2 adında bir şablon motoru kullanır.
 
 Template adı verilen yeni bir klasör oluşturdum:
 
-pi@raspberrypi:~/web-server $ mkdir templates
-pi@raspberrypi:~/web-server $ cd templates
-pi@raspberrypi:~/web-server/templates $
+### pi@raspberrypi:~/web-server $ mkdir templates
+### pi@raspberrypi:~/web-server $ cd templates
+### pi@raspberrypi:~/web-server/templates $
 
 Sonrasında main.html adında bir HTML dosyası oluşturdum:
 
-pi@raspberrypi:~/web-server/templates $ nano main.html
+### pi@raspberrypi:~/web-server/templates $ nano main.html
 
-Bu dosyanın içine aşağıdaki kodları attım:
+Sonrasında uygulamanın çalışacağı arayüz için gerekli kodları [main.html](https://github.com/fatihawk/MQTT-Protokolu-ile-RaspberryPi-Uygulamasi/blob/master/main.html) içine attım.
 
   ESP8266'nın Raspberry Pi web sunucusuyla etkileşime girmesi için PubSubClient kütüphanesini kurmamız gerekir. Bu kütüphane, MQTT'yi destekleyen bir sunucu ile basit yayınlama / abone olma mesajlaşma için bir istemci sağlar (temel olarak ESP8266'nızın Python web sunucusu ile konuşmasına izin verir).
 
@@ -81,9 +81,13 @@ Kütüphane bir dizi örnek program ile gelir. Arduino IDE yazılımında Dosya>
 
 5) Arduino IDE'mizi tekrar açtıktan sonra indirilenler klasörümüzde bir .zip klasörümüz olmalıdır.
 
-Son olarak, ESP8266'mıza tam çizimi yükleyebiliriz (SSID, şifre ve RPi IP adresim ile değiştirdim.):
+Son olarak, ESP8266'mıza tam çizimi yükleyebiliriz (SSID, şifre ve RPi IP adresim ile değiştirdim.).
+
+Bunun için [PubSubClient.ino](https://github.com/fatihawk/MQTT-Protokolu-ile-RaspberryPi-Uygulamasi/blob/master/PubSubClient.ino) adlı bir dosya oluşturup kodları Arduino IDE içerisine attım.
 
 Bu proje için kullandığımız şematik ise şöyle:
+
+![alt text](https://github.com/fatihawk/MQTT-Protokolu-ile-RaspberryPi-Uygulamasi/blob/master/%C5%9EematikBa%C4%9Flant%C4%B1lar.png)
 
 Kullanacağımız malzemeler ise:
 
@@ -96,13 +100,15 @@ Kullanacağımız malzemeler ise:
 
 Raspberry Pi web sunucunuzu başlatmak için app.py dosyasını içeren klasöre geçtim:
 
-pi@raspberrypi:~/web-server/templates $ cd ..
+### pi@raspberrypi:~/web-server/templates $ cd ..
 
 Ardından, aşağıdaki komutu çalıştırdım:
 
-pi@raspberrypi:~/web-server $ sudo python app.py
+### pi@raspberrypi:~/web-server $ sudo python app.py
 
 IP adresimi girerek tarayıcımda Raspberry Pi'mi açtım:
+
+
 
 
 
