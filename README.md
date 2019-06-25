@@ -56,8 +56,8 @@ Sonrasında uygulamanın çalışacağı arayüz için gerekli kodları [main.ht
 
 PubSubClient kitaplığını yükleme
 
-1) PubSubClient kütüphanesini indirmek için
- https://github.com/knolleary/pubsubclient/archive/master.zip   girip buradan indirebiliriz. İndirilenler klasörümüzde bir .zip klasörümüz olmalıdır.
+1) PubSubClient kütüphanesini indirmek için,
+ https://github.com/knolleary/pubsubclient/archive/master.zip  adresine girip buradan indirebiliriz. İndirilenler klasörümüzde bir .zip klasörümüz olmalıdır.
 
 2) .zip klasörünü çıkardıktan sonra pubsubclient-master klasörünü alacağız.
 
@@ -69,7 +69,7 @@ Kütüphane bir dizi örnek program ile gelir. Arduino IDE yazılımında Dosya>
 
   DHT sensörü kütüphanesi, ESP8266 veya Arduino kartlarınızla sıcaklık ve nemi okumak için herhangi bir DHT sensörünü kullanmanın kolay bir yolunu sunar.Aşağıdaki adımlarda nasıl indirilebileceğini görebiliriz:
 
-.1) DHT sensör kütüphanesini indirmek için DHT sensörü kütüphanesi, ESP8266 veya Arduino kartlarınızla sıcaklık ve nemi okumak için herhangi bir DHT sensörünü kullanmanın kolay bir yolunu sunar.
+1) DHT sensör kütüphanesini indirmek için DHT sensörü kütüphanesi, ESP8266 veya Arduino kartlarınızla sıcaklık ve nemi okumak için herhangi bir DHT sensörünü kullanmanın kolay bir yolunu sunar.
 
 1) DHT sensör kütüphanesini indirmek için https://github.com/adafruit/DHT-sensor-library girip indirdim.  İndirilenler klasörünüzde bir .zip klasörünüz olmalıdır
 
