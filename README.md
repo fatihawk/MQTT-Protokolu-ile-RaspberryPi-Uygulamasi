@@ -91,11 +91,15 @@ Bu proje için kullandığımız şematik ise şöyle:
 
 Kullanacağımız malzemeler ise:
 
-•	1x ESP8266 12E 
-•	1x DHT22 Sensör 
-•	1x 4700 Ohm Direnç
-•	2x 470 Ohm Direnç
-•	2x adet LED
+*1x ESP8266 12E 
+
+*1x DHT22 Sensör 
+
+*1x 4700 Ohm Direnç
+
+*2x 470 Ohm Direnç
+
+*2x adet LED
 
 
 Raspberry Pi web sunucunuzu başlatmak için app.py dosyasını içeren klasöre geçtim:
@@ -107,6 +111,8 @@ Ardından, aşağıdaki komutu çalıştırdım:
 ### pi@raspberrypi:~/web-server $ sudo python app.py
 
 IP adresimi girerek tarayıcımda Raspberry Pi'mi açtım:
+
+![alt text](https://github.com/fatihawk/MQTT-Protokolu-ile-RaspberryPi-Uygulamasi/blob/master/Sonu%C3%A7.jpg)
 
 
 
