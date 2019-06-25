@@ -69,7 +69,7 @@ Kütüphane bir dizi örnek program ile gelir. Arduino IDE yazılımında Dosya>
 
   DHT sensörü kütüphanesi, ESP8266 veya Arduino kartlarınızla sıcaklık ve nemi okumak için herhangi bir DHT sensörünü kullanmanın kolay bir yolunu sunar.Aşağıdaki adımlarda nasıl indirilebileceğini görebiliriz:
 
-1) DHT sensör kütüphanesini indirmek için DHT sensörü kütüphanesi, ESP8266 veya Arduino kartlarınızla sıcaklık ve nemi okumak için herhangi bir DHT sensörünü kullanmanın kolay bir yolunu sunar.
+.1) DHT sensör kütüphanesini indirmek için DHT sensörü kütüphanesi, ESP8266 veya Arduino kartlarınızla sıcaklık ve nemi okumak için herhangi bir DHT sensörünü kullanmanın kolay bir yolunu sunar.
 
 1) DHT sensör kütüphanesini indirmek için https://github.com/adafruit/DHT-sensor-library girip indirdim.  İndirilenler klasörünüzde bir .zip klasörünüz olmalıdır
 
@@ -95,11 +95,11 @@ Kullanacağımız malzemeler ise:
 
 * 1x DHT22 Sensör 
 
-*1x 4700 Ohm Direnç
+* 1x 4700 Ohm Direnç
 
-*2x 470 Ohm Direnç
+* 2x 470 Ohm Direnç
 
-*2x adet LED
+* 2x adet LED
 
 
 Raspberry Pi web sunucunuzu başlatmak için app.py dosyasını içeren klasöre geçtim:
