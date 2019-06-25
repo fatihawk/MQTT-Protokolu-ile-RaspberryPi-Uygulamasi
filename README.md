@@ -91,9 +91,9 @@ Bu proje için kullandığımız şematik ise şöyle:
 
 Kullanacağımız malzemeler ise:
 
-*1x ESP8266 12E 
+.*1x ESP8266 12E 
 
-*1x DHT22 Sensör 
+.* 1x DHT22 Sensör 
 
 *1x 4700 Ohm Direnç
 
